@@ -21,3 +21,15 @@ body {
   background-color: #fac000;
   width: 100%;
 }
+
+.q_link{
+  transition: all 200ms ease;
+}
+
+.quicklinks:has(.q_link:hover) .q_link:not(:hover) {
+  color: #999;
+}
+
+.q_link:hover{
+  color: #000;
+}

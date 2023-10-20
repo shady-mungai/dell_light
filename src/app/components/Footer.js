@@ -29,7 +29,7 @@ const socialMediaSvgs = [
         xmlns="http://www.w3.org/2000/svg"
         data-name="Layer 1"
         viewBox="0 0 24 24"
-        className="h-[24px] w-[24px]"
+        className="h-[24px] w-[24px] md:h-[32px] xl:w-[32px]"
         fill="#5C5F66"
         id="twitter"
       >
@@ -44,7 +44,7 @@ const socialMediaSvgs = [
         xmlns="http://www.w3.org/2000/svg"
         data-name="Layer 1"
         viewBox="0 0 24 24"
-        className="h-[24px] w-[24px]"
+        className="h-[24px] w-[24px] md:h-[32px] xl:w-[32px]"
         fill="#5C5F66"
         id="facebook"
       >
@@ -59,7 +59,7 @@ const socialMediaSvgs = [
         xmlns="http://www.w3.org/2000/svg"
         data-name="Layer 1"
         viewBox="0 0 24 24"
-        className="h-[24px] w-[24px]"
+        className="h-[24px] w-[24px] md:h-[32px] xl:w-[32px]"
         fill="#5C5F66"
         id="instagram"
       >
@@ -71,44 +71,62 @@ const socialMediaSvgs = [
 
 const Footer = () => {
   return (
-    <footer className="font-inter p-6 flex flex-col gap-6">
-      <p className="text-3xl font-black">
-        <span className="text-yellow-500">Dell</span> Light
-      </p>
-      <div className="flex flex-col items-start gap-5">
-        <h1 className="font-semibold text-[#222] text-sm f_title">Contact us</h1>
-        <ul className="flex flex-col items-start gap-3 text-[#4e4e4e]">
-          <li>placeholder@gmail.com</li>
-          <li>+254 712 345 678 </li>
-        </ul>
+    <footer className="font-inter flex flex-col px-4 gap-6 lg:pb-10 lg:gap-10 xl:gap-14 xl:pb-14">
+      <hr className="mb-10" />
+      <div className=" py-0 flex flex-col gap-6 sm:gap-14 m-auto max-w-6xl md:flex-row md:justify-between  w-full">
+        <p className="text-3xl font-black lg:text-5xl md:text-4xl">
+          <span className="text-yellow-500">Dell</span> Light
+        </p>
+
+        <div className="flex flex-col gap-6 sm:flex-row sm:justify-between md:gap-10 lg:gap-28">
+          <div className="flex flex-col items-start gap-5">
+            <div className="flex flex-col items-start gap-5 lg:gap-8">
+              <h1 className="font-semibold text-[#222] text-sm lg:text-lg f_title">
+                Email us
+              </h1>
+              <p className="text-[#4e4e4e] xl:text-xl">placeholder@gmail.com</p>
+            </div>
+            <div className="flex flex-col items-start gap-3 lg:gap-8">
+              <h1 className="font-semibold text-[#222] text-sm lg:text-lg f_title">
+                Call us
+              </h1>
+              <p className="text-[#4e4e4e] xl:text-xl">+254 712 345 678</p>
+            </div>
+          </div>
+          <div className="flex flex-col items-start gap-5 lg:gap-8">
+            <h1 className="font-semibold text-[#222] text-sm lg:text-lg f_title">
+              Quick Links
+            </h1>
+            <ul className="flex flex-col items-start gap-3 quicklinks">
+              {pageLinks.map(({ section, link }, index) => {
+                return (
+                  <li key={index} className="text-[#4e4e4e] xl:text-xl q_link">
+                    <a href={link}>{section}</a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div className="flex flex-col items-start gap-5 lg:gap-8">
+            <h1 className="font-semibold text-[#222] text-sm lg:text-lg f_title">
+              Follow us
+            </h1>
+            <ul className="flex gap-5">
+              {socialMediaSvgs.map(({ svg, link }, index) => {
+                return (
+                  <li key={index}>
+                    <a href={link}>{svg}</a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
       </div>
-      <div className="flex flex-col items-start gap-5">
-        <h1 className="font-semibold text-[#222] text-sm f_title">Quick Links</h1>
-        <ul className="flex flex-col items-start gap-3">
-          {pageLinks.map(({ section, link }, index) => {
-            return (
-              <li key={index} className="text-[#4e4e4e]">
-                <a href={link}>{section}</a>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-      <div className="flex flex-col items-start gap-5">
-        <h1 className="font-semibold text-[#222] text-sm f_title">Follow us</h1>
-        <ul className="flex gap-5">
-          {socialMediaSvgs.map(({ svg, link }, index) => {
-            return (
-              <li key={index}>
-                <a href={link}>{svg}</a>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-      <hr />
+
+      <hr className="m-auto w-full max-w-6xl" />
       <div className="">
-        <p className="text-center text-xs text-[#444]">
+        <p className="text-center text-xs text-[#444] lg:text-[16px]">
           Copyright © 2020. LogoIpsum. All rights reserved.
         </p>
       </div>
