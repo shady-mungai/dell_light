@@ -75,16 +75,16 @@ const Footer = () => {
       <p className="text-3xl font-black">
         <span className="text-yellow-500">Dell</span> Light
       </p>
-      <div className="flex flex-col gap-5">
-        <h1 className="font-semibold text-[#7e7e7e] text-xs underline">Contact us</h1>
-        <ul className="flex flex-col gap-3 text-[#333]">
+      <div className="flex flex-col items-start gap-5">
+        <h1 className="font-semibold text-yellow-500 text-xs f_title">Contact us</h1>
+        <ul className="flex flex-col items-start gap-3 text-[#333]">
           <li>placeholder@gmail.com</li>
           <li>+254 712 345 678 </li>
         </ul>
       </div>
-      <div className="flex flex-col gap-5">
-        <h1 className="font-semibold text-[#7e7e7e] text-xs underline">Quick Links</h1>
-        <ul className="flex flex-col gap-3">
+      <div className="flex flex-col items-start gap-5">
+        <h1 className="font-semibold text-yellow-500 text-xs f_title">Quick Links</h1>
+        <ul className="flex flex-col items-start gap-3">
           {pageLinks.map(({ section, link }, index) => {
             return (
               <li key={index} className="text-[#333]">
@@ -94,8 +94,8 @@ const Footer = () => {
           })}
         </ul>
       </div>
-      <div className="flex flex-col gap-5">
-        <h1 className="font-semibold text-[#7e7e7e] text-xs underline">Follow us</h1>
+      <div className="flex flex-col items-start gap-5">
+        <h1 className="font-semibold text-yellow-500 text-xs f_title">Follow us</h1>
         <ul className="flex gap-5">
           {socialMediaSvgs.map(({ svg, link }, index) => {
             return (
