@@ -77,7 +77,7 @@ const Footer = () => {
       </p>
       <div className="flex flex-col items-start gap-5">
         <h1 className="font-semibold text-[#222] text-sm f_title">Contact us</h1>
-        <ul className="flex flex-col items-start gap-3 text-[#333]">
+        <ul className="flex flex-col items-start gap-3 text-[#4e4e4e]">
           <li>placeholder@gmail.com</li>
           <li>+254 712 345 678 </li>
         </ul>
@@ -87,7 +87,7 @@ const Footer = () => {
         <ul className="flex flex-col items-start gap-3">
           {pageLinks.map(({ section, link }, index) => {
             return (
-              <li key={index} className="text-[#333]">
+              <li key={index} className="text-[#4e4e4e]">
                 <a href={link}>{section}</a>
               </li>
             );
