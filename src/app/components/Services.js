@@ -41,7 +41,7 @@ const Services = () => {
                 backgroundColor: bg,
                 color: text_color,
               }}
-              className={`w-full bg-[${bg}] text-[${text_color}] rounded-lg p-4 text-center gap-5 py-14 flex flex-col`}
+              className={`w-full bg-[${bg}] text-[${text_color}] rounded-[1rem] p-4 text-center gap-5 py-14 flex flex-col`}
             >
               <h1 className="text-2xl font-black min-w-fit">{service}</h1>
               <p className="font-medium">{description}</p>
