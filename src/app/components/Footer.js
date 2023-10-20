@@ -20,7 +20,7 @@ const pageLinks = [
     link: "",
   },
 ];
-
+// settings
 const socialMediaSvgs = [
   {
     link: "",
