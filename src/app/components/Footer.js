@@ -71,28 +71,41 @@ const socialMediaSvgs = [
 
 const Footer = () => {
   return (
-    <footer className="font-inter p-6 flex flex-col gap-10">
+    <footer className="font-inter p-6 flex flex-col gap-6">
       <p className="text-3xl font-black">
         <span className="text-yellow-500">Dell</span> Light
       </p>
-      <ul className="flex flex-col gap-3">
-        {pageLinks.map(({ section, link }, index) => {
-          return (
-            <li key={index} className="text-[#555]">
-              <a href={link}>{section}</a>
-            </li>
-          );
-        })}
-      </ul>
-      <ul className="flex gap-3">
-        {socialMediaSvgs.map(({ svg, link }, index) => {
-          return (
-            <li key={index}>
-              <a href={link}>{svg}</a>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="flex flex-col gap-5">
+        <h1 className="font-semibold text-[#4e4e4e] underline">Contact us</h1>
+        <ul className="flex flex-col gap-3 text-[#555]">
+          <li>placeholder@gmail.com</li>
+          <li>+254 712 345 678 </li>
+        </ul>
+      </div>
+      <div className="flex flex-col gap-5">
+        <h1 className="font-semibold text-[#4e4e4e] underline">Quick Links</h1>
+        <ul className="flex flex-col gap-3">
+          {pageLinks.map(({ section, link }, index) => {
+            return (
+              <li key={index} className="text-[#555]">
+                <a href={link}>{section}</a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      <div className="flex flex-col gap-5">
+        <h1 className="font-semibold text-[#4e4e4e] underline">Follow us</h1>
+        <ul className="flex gap-5">
+          {socialMediaSvgs.map(({ svg, link }, index) => {
+            return (
+              <li key={index}>
+                <a href={link}>{svg}</a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
       <hr />
       <div className="">
         <p className="text-center text-xs text-[#444]">
