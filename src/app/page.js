@@ -5,7 +5,7 @@ import FAQS from "./components/FAQS";
 
 export default function Home() {
   return (
-    <main className="px-6">
+    <main className="px-4">
       <Services />
       <FAQS />
     </main>
