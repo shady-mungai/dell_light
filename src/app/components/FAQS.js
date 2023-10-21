@@ -39,7 +39,7 @@ const FAQS = () => {
         FAQS
       </h1>
 
-      <div className="flex flex-col px-4">
+      <div className="flex flex-col">
         {pharmacyFAQs.map(({ faq, description }, index) => {
           return (
             <div className="py-6 border-b" key={index}>
