@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 
 const pharmacyFAQs = [
@@ -15,7 +15,7 @@ const pharmacyFAQs = [
   {
     faq: "What are your operating hours?",
     description:
-      "Our hours are [Opening Time] to [Closing Time], [Days of the Week].",
+      "Our hours are 0800hrs to 1700hrs, Monday to Friday.",
   },
   {
     faq: "Can I transfer my prescriptions to your pharmacy?",
@@ -30,9 +30,15 @@ const pharmacyFAQs = [
 ];
 
 const FAQS = () => {
-
   const [activeIndex, setActiveIndex] = useState(null);
 
+  const toggleFaq = (index) => {
+    if (index === activeIndex) {
+      setActiveIndex(null);
+    } else {
+      setActiveIndex(index);
+    }
+  };
   return (
     <section className="max-w-7xl w-full m-auto mb-10">
       <h1 className="text-center text-3xl font-black lg:text-5xl md:text-4xl mb-4">
@@ -41,10 +47,15 @@ const FAQS = () => {
 
       <div className="flex flex-col">
         {pharmacyFAQs.map(({ faq, description }, index) => {
+            const isFaqOpen = index === activeIndex;
           return (
-            <div className="py-6 border-b" key={index}>
+            <div
+              onClick={() => toggleFaq(index)}
+              className="py-6 border-b"
+              key={index}
+            >
               <div className="flex items-center justify-between">
-                <p>{faq}</p>
+                <p className="font-medium">{faq}</p>
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -53,6 +64,7 @@ const FAQS = () => {
                     height="20"
                     version="1.1"
                     viewBox="0 0 29 29"
+                    className={`transition-all duration-200 ease-in ${isFaqOpen ? "rotate-[225deg]" : "rotate-[0deg]"}`}
                   >
                     <path
                       fill="none"
@@ -66,6 +78,8 @@ const FAQS = () => {
                   </svg>
                 </div>
               </div>
+
+              {index === activeIndex ? <p className="text-[#3e3e3e] mt-5">{description}</p> : null}
             </div>
           );
         })}
