@@ -73,12 +73,12 @@ const Footer = () => {
   return (
     <footer className="font-inter flex flex-col px-4 gap-6 lg:pb-10 lg:gap-10 xl:gap-14 xl:pb-14">
       <hr className="mb-10" />
-      <div className=" py-0 flex flex-col gap-6 sm:gap-14 m-auto max-w-6xl md:flex-row md:justify-between  w-full">
+      <div className=" py-0 flex flex-col gap-6 sm:gap-14 m-auto max-w-6xl md:flex-row md:justify-between sm:w-[90%] xl:w-full w-full">
         <p className="text-3xl font-black lg:text-5xl md:text-4xl">
           <span className="text-yellow-500">Dell</span> Light
         </p>
 
-        <div className="flex flex-col gap-6 sm:flex-row sm:justify-between md:gap-10 lg:gap-28">
+        <div className="flex flex-col gap-6 sm:flex-row sm:justify-between md:gap-10 xl:gap-28">
           <div className="flex flex-col items-start gap-5">
             <div className="flex flex-col items-start gap-5 lg:gap-8">
               <h1 className="font-semibold text-[#222] text-sm lg:text-lg f_title">

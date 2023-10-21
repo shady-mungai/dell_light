@@ -20,34 +20,55 @@ const services = [
     bg: "#ececec",
     text_color: "#000",
   },
-  {
-    service: "Pharmacy Locator",
-    description:
-      "Include a feature or section for patients to find the nearest pharmacy locations or partner pharmacies where they can conveniently pick up their prescriptions.",
-    bg: "#dfac04",
-    text_color: "#fff",
-  },
 ];
 
 const Services = () => {
   return (
-    <section className=" mb-20">
-      <h1 className="text-4xl font-black my-6">Our services</h1>
-      <div className="grid gap-6">
-        {services.map(({ service, description, bg, text_color }) => {
-          return (
-            <div
-              style={{
-                backgroundColor: bg,
-                color: text_color,
-              }}
-              className={`w-full bg-[${bg}] text-[${text_color}] rounded-[1rem] p-4 text-center gap-5 py-14 flex flex-col`}
-            >
-              <h1 className="text-2xl font-black min-w-fit">{service}</h1>
-              <p className="font-medium">{description}</p>
-            </div>
-          );
-        })}
+    <section className="max-w-7xl w-full m-auto h-auto py-10 xl:h-screen lg:mb-10 flex flex-col gap-10 lg:gap-20">
+      <header>
+        <h1 className="font-black text-3xl lg:text-5xl  text-[#1e1e1e] my-5 lg:my-10">
+          What we offer
+        </h1>
+        <p className="max-w-2xl md:text-lg text-[#3a3a3a]">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi
+          harum totam laborum modi eaque, et dolorem quo natus illum blanditiis
+          reprehenderit, soluta officiis maiores iste deserunt alias itaque.
+          Quisquam, at!
+        </p>
+      </header>
+      <div className="flex flex-col gap-6">
+        <div className="w-full grid md:grid-cols-2 ">
+          <div className="flex flex-col gap-3 bg-zinc-100 p-5 max-w-xl">
+            <span className="text-sm font-black text-yellow-400 md:text-md">
+              01
+            </span>
+            <h1 className="font-semibold text-lg md:text-2xl">
+              Online Ordering
+            </h1>
+            <p className="text-[#3e3e3e] text-lg leading-loose">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Exercitationem nam facere ut, maiores placeat dolorum laboriosam
+              laudantium maxime esse corporis amet quis. Minima deserunt
+              aliquid, nisi esse odio cumque reiciendis!
+            </p>
+          </div>
+          <div></div>
+        </div>
+        <div className="grid gap-6 md:grid-cols-3">
+          {services.map(({ service, description }, index) => {
+            return (
+              <div className="flex flex-col gap-3 bg-zinc-100 p-5 max-w-xl">
+                <span className="text-sm font-black text-yellow-400 md:text-md">
+                  0{index + 2}
+                </span>
+                <h1 className="font-semibold text-lg md:text-2xl">{service}</h1>
+                <p className="text-[#3e3e3e] text-lg leading-loose">
+                  {description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
