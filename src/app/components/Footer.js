@@ -71,7 +71,7 @@ const socialMediaSvgs = [
 
 const Footer = () => {
   return (
-    <footer className="font-inter flex flex-col px-4 gap-6 lg:pb-10 lg:gap-10 xl:gap-14 xl:pb-14">
+    <footer className="font-inter flex flex-col px-4 gap-6 lg:pb-10 lg:gap-10 xl:gap-14 xl:pb-14 px-4">
       <hr className="mb-10" />
       <div className=" py-0 flex flex-col gap-6 sm:gap-14 m-auto max-w-6xl md:flex-row md:justify-between sm:w-[90%] xl:w-full w-full">
         <p className="text-3xl font-black lg:text-5xl md:text-4xl">
