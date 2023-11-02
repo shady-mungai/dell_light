@@ -11,7 +11,7 @@ const HeroSection = () => {
         alt="image"
         className="absolute top-0 left-0 z-[-1] w-full h-full object-cover"
       />
-      <div className="w-full h-full px-4 flex items-end pb-28">
+      <div className="w-full h-full px-4 flex items-end pb-40">
         <div className="flex flex-col gap-5 p-4">
           <div className="flex gap-5 items-center">
             <div className="w-10 h-[3px] bg-yellow-500"></div>
