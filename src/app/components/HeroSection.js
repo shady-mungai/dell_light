@@ -18,7 +18,7 @@ const HeroSection = () => {
               Dell Light
             </p>
           </div>
-          <p className="text-3xl sm:text-5xl leading-normal font-semibold sm:font-bold text-white font-inter w-[7em] sm:w-3/4 uppercase md:normal-case lg:max-w-2xl lg:text-7xl">
+          <p className="text-4xl sm:text-5xl leading-normal font-bold sm:font-bold text-white font-inter w-[7em] sm:w-3/4 uppercase md:normal-case lg:max-w-2xl lg:text-7xl">
             Setting a new standard for the future of pharma
           </p>
         </div>
