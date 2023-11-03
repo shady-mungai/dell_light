@@ -10,7 +10,7 @@ const HeroSection = () => {
         alt="image"
         className="absolute top-0 left-0 z-[-1] w-full h-full object-cover"
       />
-      <div className="w-full h-full px-4 md:px-10 flex items-end md:items-center pb-40">
+      <div className="w-full h-full px-4 md:px-10 flex items-end md:items-center pb-32">
         <div className="flex flex-col gap-5 p-4 max-w-7xl w-full m-auto">
           <div className="flex gap-5 items-center">
             <div className="w-10 h-[3px] bg-yellow-500"></div>
@@ -18,7 +18,7 @@ const HeroSection = () => {
               Dell Light
             </p>
           </div>
-          <p className="text-3xl sm:text-5xl leading-normal tracking-wide font-semibold sm:font-bold text-white font-inter w-[7em] sm:w-3/4 uppercase md:normal-case lg:max-w-2xl lg:text-7xl">
+          <p className="text-3xl sm:text-5xl leading-normal font-semibold sm:font-bold text-white font-inter w-[7em] sm:w-3/4 uppercase md:normal-case lg:max-w-2xl lg:text-7xl">
             Setting a new standard for the future of pharma
           </p>
         </div>
