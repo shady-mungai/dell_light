@@ -24,7 +24,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="max-w-7xl w-full m-auto h-auto py-10 xl:h-screen lg:mb-10 flex flex-col gap-10 lg:gap-20">
+    <section className="max-w-7xl w-full m-auto h-auto py-10 xl:h-screen lg:mb-10 flex flex-col gap-10 lg:gap-20 px-4">
       <header>
         <h1 className="font-black text-3xl lg:text-5xl  text-[#1e1e1e] my-5 lg:my-10">
           What we offer

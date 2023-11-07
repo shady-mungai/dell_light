@@ -40,7 +40,7 @@ const FAQS = () => {
     }
   };
   return (
-    <section className="max-w-7xl w-full m-auto mb-10">
+    <section className="max-w-7xl w-full m-auto mb-10 px-4">
       <h1 className="text-center text-3xl font-black lg:text-5xl md:text-4xl mb-4">
         FAQS
       </h1>
